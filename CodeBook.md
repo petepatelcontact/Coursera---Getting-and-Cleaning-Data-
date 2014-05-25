@@ -5,25 +5,42 @@ Coursera - Getting and Cleaning Data
 Code Book – run_analysis.R
 
 Variables
-Variable Name	Description
-Variables for read.table
-features	Data frame to hold contents of features.txt
-activity_labels	Data frame to hold the activity number and corresponding descriptions (activity_labels.txt)
-subject_train	Data frame to hold the subjects assigned to the training dataset (subject_train.txt)
-subject_test	Data frame to hold the subjects assigned to the test dataset (subject_test.txt)
-x_train	Data frame to hold the x_train.txt dataset
-y_train	Data frame to hold the y_train.txt dataset
-x_test	Data frame to hold the x_test.txt dataset
-y_test	Data frame to hold the y_test.txt dataset
+
+Variables for read.table()
+   features	- Data frame to hold contents of features.txt
+   
+   activity_labels - 	Data frame to hold the activity number and corresponding descriptions (activity_labels.txt)
+   
+   subject_train - 	Data frame to hold the subjects assigned to the training dataset (subject_train.txt)
+   
+   subject_test	- Data frame to hold the subjects assigned to the test dataset (subject_test.txt)
+   
+   x_train	- Data frame to hold the x_train.txt dataset 
+   
+   y_train	- Data frame to hold the y_train.txt dataset
+   
+   x_test	- Data frame to hold the x_test.txt dataset
+   
+   y_test	- Data frame to hold the y_test.txt dataset
+   
+
 Other Variables
-a	Logical vector to determine which columns to keep for subsetting only mean and standard deviation
-descriptiveColName	List variable to replace supplied column names with descriptive ones
-mergedData	Data frame to hold the merged rows from train and test data sets along with the columns for subject and activities
-tidyData	Data frame to hold the summarized data by Subject and Activity 
+   a	- Logical vector to determine which columns to keep for subsetting only mean and standard deviation
+   
+   descriptiveColName - 	List variable to replace supplied column names with descriptive ones
+   
+   mergedData	- Data frame to hold the merged rows from train and test data sets along with the columns for subject and  
+   activities
+   
+   tidyData	- Data frame to hold the summarized data by Subject and Activity 
+   
 
 Summary of approach
+
 1.	Read all input datasets
+
 2.	Assign column headings to each dataset – needed to determine what data columns were
+
 3.	Based on column headings stripped out any columns that were not Standard Deviation or Mean
 4.	Extracted column names from remaining set and observed values of columns names
 5.	Created a list of replacements required to make names meaningful and used gsub on the list for each replacement
